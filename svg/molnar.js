@@ -1,11 +1,8 @@
 
 //CODE
-
 let twrk = {};
 
-
 //COORDINATES
-
 twrk.scale = function ({ width, height }) {
     if (width) {
         twrk.width = width;
@@ -20,9 +17,7 @@ twrk.scale = function ({ width, height }) {
 }
 twrk.scale({ height: 120 });
 
-
 //SVG
-
 let svg = {};
 
 svg.nameSpace = "http://www.w3.org/2000/svg";
@@ -45,7 +40,7 @@ svg.makeLayer = function ({ parent, id, x = 0, y = 0 }) {
     parent.appendChild(dom[id]);
 };
 
-svg.makeLine = function ({ parent, id, d = "", color = "#ff00ff", stroke = 1, cap = "butt", join = "round" }) {
+svg.makeLine = function ({ parent, id, d = "", color = "#3BC964", stroke = 1, cap = "butt", join = "round" }) {
     dom[id] = document.createElementNS(svg.nameSpace, "path");
     dom[id].setAttributeNS(null, "fill", "none");
     dom[id].setAttributeNS(null, "d", d);
@@ -57,7 +52,7 @@ svg.makeLine = function ({ parent, id, d = "", color = "#ff00ff", stroke = 1, ca
     parent.appendChild(dom[id]);
 };
 
-svg.makeShape = function ({ parent, id, d = "", color = "#ff00ff" }) {
+svg.makeShape = function ({ parent, id, d = "", color = "#3BC964" }) {
     dom[id] = document.createElementNS(svg.nameSpace, "path");
     dom[id].setAttributeNS(null, "fill", color);
     dom[id].setAttributeNS(null, "d", d);
@@ -65,9 +60,7 @@ svg.makeShape = function ({ parent, id, d = "", color = "#ff00ff" }) {
     parent.appendChild(dom[id]);
 };
 
-
 //DOM
-
 let dom = {};
 
 //stage
@@ -78,14 +71,6 @@ document.body.appendChild(dom.stage);
 
 //svg layer
 svg.makeLayer({ parent: dom.stage, id: "svgLayer", x: 0, y: 0 });
-
-//drawing
-//svg.makeShape({ parent: dom.svgLayer, id: "form", stroke: 1, color: "#f00", d: svg.path([{ x: -30, y: -50 }, { x: 50, y: 30 }, { x: -50, y: 30 }]) })
-//svg.makeLine({ parent: dom.svgLayer, id: "linie", stroke: 1, color: "#f0f", d: svg.path([{ x: -50, y: -50 }, { x: 50, y: 30 }]) })
-//svg.makeLine({ parent: dom.svgLayer, id: "punkt", cap: "round", stroke: 10, color: "#ff0", d: svg.path([{ x: -30, y: -30 }]) })
-
-//let colors = ["#f00", "#ff0", "#f0f"];
-//let sizes = [square, square * 0.6, square * 0.3];
 
 let square = 10;
 let distance = 12;
