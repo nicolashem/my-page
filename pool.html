@@ -11,15 +11,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
         <style>
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                font-size: 0;
+                font-family: sans-serif;
+                color: #fff;
+                background-color: #000;
+                user-select: none;
+            }
+    
             stage,
             svg,
             path {
-                margin-left: 55px;
                 position: fixed;
+                margin-top: -60px;
+                margin-left: 0px;
                 overflow: visible;
-                text-align: center;
             }
         </style>
+
 
     </head>
 
@@ -30,12 +43,13 @@
         <p class="titleDescription">the pool.</p>
 
         <p class="description">- svg engine, javascript & perlin noise -</p>
+
+        <script src="lib/simplex-noise.min.js"></script>
+        <script src="svg/pool.js"></script>
         
 
     </body>
 
-    <script src="lib/simplex-noise.min.js"></script>
-    <script src="svg/pool.js"></script>
 
 
 </html>
