@@ -17,7 +17,7 @@ twrk.scale = function ({ width, height }) {
     }
     twrk.center = { x: twrk.width / 2, y: twrk.height / 2 };
 }
-twrk.scale({ height: 120 });
+twrk.scale({ height: 140 });
 
 
 //SVG
