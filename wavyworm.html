@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>random</title>
+        <title>wavy worm</title>
         <meta name="viewport" content="initial-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -19,7 +19,7 @@
                 font-size: 0;
                 font-family: sans-serif;
                 color: #fff;
-                background-color: rgb(0, 0, 0);
+                background-color: #000;
                 user-select: none;
             }
     
@@ -27,25 +27,26 @@
             svg,
             path {
                 position: fixed;
+                margin-top: -60px;
+                margin-left: 0px;
                 overflow: visible;
             }
         </style>
+    
+</head>
 
-    </head>
+<body style="background-color:rgb(0, 0, 0);">
 
-    <body style="background-color:rgb(0, 0, 0);">
+    <a class="buttonBack" href="index.html">BACK</a>
 
-        <a class="buttonBack" href="index.html">BACK</a>
+    <p class="titleDescription">wavy worm.</p>
 
-        <p class="titleDescription">the pool.</p>
-
-        <p class="description">- javascript & perlin noise -</p>
-        
-
-    </body>
+    <p class="description">- svg engine, javascript & verlet -</p>
 
     <script src="lib/simplex-noise.min.js"></script>
-    <script src="svg/random.js"></script>
+    <script src="svg/wavyworm.js"></script>
+    
 
+</body>
 
 </html>
