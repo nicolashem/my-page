@@ -80,7 +80,7 @@ function setup() {
   slider8.parent('menu-id')
   slider8.addClass('slider');
 
-  slider9 = createSlider(0, 0.1, 0, 0.01);
+  slider9 = createSlider(0.1, 5, 1, 0.1);
   slider9.parent('menu-id')
   slider9.addClass('slider');
 
@@ -131,6 +131,7 @@ function draw() {
   randomSeed(randomS)
   translate(translX,translY)
   strokeWeight(strokeW)
+  scale(val9)
 
  
   
@@ -185,6 +186,8 @@ function draw() {
           vertex(path[2].x, path[2].y);
           vertex(path[3].x, path[3].y);
           endShape(CLOSE);
+
+
         }
         
     }
