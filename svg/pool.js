@@ -16,7 +16,7 @@
             twrk.width = window.innerWidth / twrk.res;
         }
         twrk.center = { x: twrk.width / 2, y: twrk.height / 2 };
-        //twrk.center = { x: twrk.width, y: twrk.height };
+        // twrk.center = { x: twrk.width, y: twrk.height };
     }
     twrk.scale({ height: 160 });
 

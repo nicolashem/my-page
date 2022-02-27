@@ -65,7 +65,18 @@ h3 {
 }
 
 #stage {
-    object-position: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    
+
+    /* position:relative; */
+}
+
+#svgLayer {
+    width: 100%;
+    /* margin-left: -50%; */
 }
 
 main {

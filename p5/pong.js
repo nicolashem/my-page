@@ -16,7 +16,7 @@ let traces = [] //enthält die vergangenen Positionen vom Ball
 let traceLength = 10 //Länge der Ballspur
 
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+  createCanvas(windowWidth,windowHeight-400);
     x = random(0,width);
     y = random(0,height/2);
     noStroke();
