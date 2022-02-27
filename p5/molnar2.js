@@ -8,49 +8,64 @@ let sizes = [square, square * 0.75, square * .5];
 
 
 function setup() {
-    createCanvas(700, 950);
+    const cnv = createCanvas(600, 800);
+    cnv.parent('p5-canvas-id')
 
     slider = createSlider(0, 100, 50);
-    slider.position(10, 10);
-    slider.style('width', '120px');
+    slider.parent('menu-id')
+    slider.addClass('slider');
 
     slider2 = createSlider(10, 200, 50);
-    slider2.position(10, 30);
-    slider2.style('width', '120px');
+    slider2.parent('menu-id')
+    slider2.addClass('slider');
 
     slider3 = createSlider(1, 20, 6, 1);
-    slider3.position(10, 50);
-    slider3.style('width', '120px');
+    slider3.parent('menu-id')
+    slider3.addClass('slider');
 
     slider4 = createSlider(1, 60, 1, 1);
-    slider4.position(10, 70);
-    slider4.style('width', '120px');
+    slider4.parent('menu-id')
+    slider4.addClass('slider');
 
     slider5 = createSlider(1, 20, 1, 1);
-    slider5.position(10, 90);
-    slider5.style('width', '120px');
+    slider5.parent('menu-id')
+    slider5.addClass('slider');
+
+    slider6 = createSlider(1, 800, 0, 1);
+    slider6.parent('menu-id')
+    slider6.addClass('slider');
+
+    slider7 = createSlider(1, 800, 0, 1);
+    slider7.parent('menu-id')
+    slider7.addClass('slider');
     
 }
 
 function draw() {
     
-let val1 = slider.value();
-let val2 = slider2.value();
-let val3 = slider3.value();
-let val4 = slider4.value();
-let val5 = slider5.value();
+    let val1 = slider.value();
+    let val2 = slider2.value();
+    let val3 = slider3.value();
+    let val4 = slider4.value();
+    let val5 = slider5.value();
+    let val6 = slider6.value();
+    let val7 = slider7.value();
 
-noFill();
-strokeWeight(val4);
+    noFill();
+    strokeWeight(val4);
+    stroke(255)
 
-scale(val5);
+    scale(val5);
 
-square = val2;
-cells = val3;
+    square = val2;
+    cells = val3;
 
-randomSeed(val1);
+    randomSeed(val1);
 
-background(255);
+    background(0);
+
+    translate(val6, val7)
+
 
     for (let x = 0; x < cells; x++) {
 

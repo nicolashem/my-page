@@ -45,6 +45,7 @@ h3 {
     margin-left: 30px;
 }
 
+
 .center {
     text-align: center;
 }
@@ -108,7 +109,7 @@ main {
 
 .imageHome {
     width:300px;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
     filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
