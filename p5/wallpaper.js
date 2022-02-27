@@ -33,10 +33,14 @@ function setup() {
   colorMode(HSL)
 
   colorPicker = createColorPicker('#000000');
-  colorPicker.position(20, height + 5);
+  colorPicker.parent('menu-id')
+  colorPicker.addClass('colorPicker');
+  // colorPicker.position(35, height - 200);
 
   colorPicker2 = createColorPicker('#EEEEEE');
-  colorPicker2.position(20, height-50);
+  colorPicker2.parent('menu-id')
+  colorPicker2.addClass('colorPicker');
+  // colorPicker2.position(35, height- 150);
 
   // button = createButton('color on/off');
   // button.mousePressed(colorizer);
@@ -80,9 +84,9 @@ function setup() {
   slider9.parent('menu-id')
   slider9.addClass('slider');
 
-  slider10 = createSlider(1, 100, 1);
-  slider10.parent('menu-id')
-  slider10.addClass('slider');
+  // slider10 = createSlider(1, 100, 1);
+  // slider10.parent('menu-id')
+  // slider10.addClass('slider');
 
   slider11 = createSlider(1, 60, 1);
   slider11.parent('menu-id')
@@ -114,7 +118,7 @@ function draw() {
   let translY = slider8.value();
   let val9 = slider9.value();
 
-  let val10 = slider10.value();
+  //let val10 = slider10.value();
   
   let strokeW = slider11.value();
 
@@ -128,10 +132,6 @@ function draw() {
   translate(translX,translY)
   strokeWeight(strokeW)
 
-  // push()
-  // translate(width/2, height/2)
-  // pop()
-  // rotate(val9)
  
   
   let square = 50;
@@ -139,13 +139,12 @@ function draw() {
   
   let sizes = [0, 0, square, square * 0.9, square * 0.8, square * 0.7, square * 0.6, square * 0.5, square * 0.4, square * 0.3, square * 0.2, square * 0.1];
 
-  rotate(val9)
   for(let x = 0; x < cellsX; x++){
     for(let y = 0; y < cellsY; y++){
             
       let xpos = 375 + offset + x * distance
       let ypos = 420 + offset + y * distance
-      rotate(val9)
+  
 
 
         for(let z = 0; z < sizes.length; z++) {
